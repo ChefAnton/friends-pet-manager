@@ -1,0 +1,17 @@
+<form (ngSubmit)="submit()" class="form">
+  <h2>{{ isEdit ? 'Edit Friend' : 'Add Friend' }}</h2>
+  <label>First Name<input formControlName="firstName" /></label>
+  <label>Last Name<input formControlName="lastName" /></label>
+  <label>Gender
+    <select formControlName="gender">
+      <option value="">--</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+  </label>
+  <label>DOB<input type="date" formControlName="dob" /></label>
+  <label>Description<textarea formControlName="description"></textarea></label>
+  <button type="submit">Save</button>
+  <button type="button" (click)="router.navigate(['/friends'])">Cancel</button>
+</form>

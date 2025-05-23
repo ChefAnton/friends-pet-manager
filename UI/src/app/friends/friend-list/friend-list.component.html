@@ -1,0 +1,11 @@
+<div class="list">
+  <h2>Friends</h2>
+  <button (click)="router.navigate(['/friends/new'])">Add Friend</button>
+  <ul>
+    <li *ngFor="let f of friends">
+      {{f.firstName}} {{f.lastName}}
+      <button (click)="edit(f.friendId)">Edit</button>
+      <button (click)="delete(f.friendId)">Delete</button>
+    </li>
+  </ul>
+</div>

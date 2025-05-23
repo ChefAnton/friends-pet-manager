@@ -1,0 +1,15 @@
+<form (ngSubmit)="submit()" class="form">
+  <h2>Register</h2>
+  <div *ngIf="error" class="error">{{ error }}</div>
+  <label>Username
+    <input formControlName="username" />
+  </label>
+  <label>Password
+    <input type="password" formControlName="password" />
+  </label>
+  <label>Confirm Password
+    <input type="password" formControlName="confirm" />
+  </label>
+  <button type="submit">Register</button>
+  <p>Already have an account? <a routerLink="/login">Login</a></p>
+</form>

@@ -1,0 +1,17 @@
+<form (ngSubmit)="submit()" class="form">
+  <h2>{{ isEdit ? 'Edit Pet' : 'Add Pet' }}</h2>
+  <label>Owner
+    <select formControlName="friendId">
+      <option *ngFor="let f of friends" [value]="f.friendId">
+        {{f.firstName}} {{f.lastName}}
+      </option>
+    </select>
+  </label>
+  <label>Pet Type<input formControlName="petType" /></label>
+  <label>Breed<input formControlName="breed" /></label>
+  <label>Name<input formControlName="name" /></label>
+  <label>DOB<input type="date" formControlName="dob" /></label>
+  <label>Description<textarea formControlName="description"></textarea></label>
+  <button type="submit">Save</button>
+  <button type="button" (click)="router.navigate(['/pets'])">Cancel</button>
+</form>

@@ -1,0 +1,12 @@
+<form (ngSubmit)="submit()" class="form">
+  <h2>Login</h2>
+  <div *ngIf="error" class="error">{{ error }}</div>
+  <label>Username
+    <input formControlName="username" />
+  </label>
+  <label>Password
+    <input type="password" formControlName="password" />
+  </label>
+  <button type="submit">Login</button>
+  <p>Don't have an account? <a routerLink="/register">Register</a></p>
+</form>

@@ -1,0 +1,11 @@
+<div class="list">
+  <h2>Pets</h2>
+  <button (click)="router.navigate(['/pets/new'])">Add Pet</button>
+  <ul>
+    <li *ngFor="let p of pets">
+      {{p.name}} ({{p.petType}})
+      <button (click)="edit(p.petId)">Edit</button>
+      <button (click)="delete(p.petId)">Delete</button>
+    </li>
+  </ul>
+</div>
